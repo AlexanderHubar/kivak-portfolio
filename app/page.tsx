@@ -1,5 +1,9 @@
-import { FAQ } from "./components/faq";
+import { Hero } from "./components/hero";
 
 export default function Home() {
-  return <div />;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
