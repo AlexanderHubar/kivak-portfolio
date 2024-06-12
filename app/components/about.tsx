@@ -2,20 +2,12 @@ import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { Socials } from "./socials";
+import { SectionHeader } from "@/components/ui/section-header";
 
 export function About() {
   return (
     <section className="px-4 lg:px-20 mb-20">
-      <div className="flex flex-col gap-5 lg:flex-row lg:justify-between pb-5 border-b border-dark-12 mb-10">
-        <div>
-          <span className="text-sm lg:text-base text-grey-50 font-semibold uppercase">
-            About
-          </span>
-          <h2 className="text-2xl lg:text-5xl text-white font-semibold uppercase">
-            I am Artem
-          </h2>
-        </div>
-
+      <SectionHeader subtitle="About" title="I am Artem">
         <Link
           href="/"
           className={buttonVariants({
@@ -26,7 +18,7 @@ export function About() {
         >
           Know More
         </Link>
-      </div>
+      </SectionHeader>
       <div className="grid lg:grid-cols-2 lg:gap-5 lg:items-center">
         <Image
           width={630}
