@@ -6,6 +6,13 @@ body {
   @apply bg-dark-3 antialiased text-white;
 }
 
+.border-gradient {
+  background: linear-gradient(to right, rgb(28 28 33), rgb(28 28 33)), linear-gradient(160deg, rgb(47, 47, 55), rgba(7, 47, 55, 0%));
+  border: 1px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
