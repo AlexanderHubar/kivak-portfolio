@@ -7,8 +7,15 @@ body {
 }
 
 .border-gradient {
+  @apply transition-all duration-300 ease-out border border-transparent;
   background: linear-gradient(to right, rgb(28 28 33), rgb(28 28 33)), linear-gradient(160deg, rgb(47, 47, 55), rgba(7, 47, 55, 0%));
-  border: 1px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
+.border-gradient:hover {
+  @apply shadow-primary border border-transparent;
+  background: linear-gradient(to right, rgb(74 44 237), rgb(74 44 237)), linear-gradient(160deg, rgb(47, 47, 55), rgba(7, 47, 55, 0%));
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
 }

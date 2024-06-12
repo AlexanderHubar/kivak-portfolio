@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { LetsWorkTogether } from "./lets-work-together";
 import { ServiceMarquee } from "./services-marquee";
 
@@ -22,29 +23,33 @@ export function Hero() {
       </section>
       <ServiceMarquee />
       <div className="grid auto-rows-[424px] grid-cols-3 gap-4 px-4 lg:px-20 mb-20">
-        <div className="row-span-1 rounded-xl border-slate-400/10  dark:bg-neutral-900 ">
-          <img
+        <div className="row-span-1 rounded-xl border-slate-400/10  dark:bg-neutral-900 relative">
+          <Image
+            fill
             className="object-cover w-full h-full rounded-xl"
             src="https://images.unsplash.com/photo-1531369201-4f7be267b1de?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />
         </div>
-        <div className="row-span-1 rounded-xl border-slate-400/10  dark:bg-neutral-900 col-span-2">
-          <img
+        <div className="row-span-1 rounded-xl border-slate-400/10  dark:bg-neutral-900 col-span-2 relative">
+          <Image
+            fill
             className="object-cover w-full h-full rounded-xl"
             src="https://plus.unsplash.com/premium_photo-1711387451641-406e08cf075b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />
         </div>
-        <div className="row-span-1 rounded-xl border-slate-400/10  dark:bg-neutral-900 col-span-2">
-          <img
+        <div className="row-span-1 rounded-xl border-slate-400/10  dark:bg-neutral-900 col-span-2 relative">
+          <Image
+            fill
             className="object-cover w-full h-full rounded-xl"
             src="https://images.unsplash.com/photo-1516831906352-1623190ca036?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />
         </div>
-        <div className="row-span-1 rounded-xl border-slate-400/10 dark:bg-neutral-900 ">
-          <img
+        <div className="row-span-1 rounded-xl border-slate-400/10 dark:bg-neutral-900 relative">
+          <Image
+            fill
             className="object-cover w-full h-full rounded-xl"
             src="https://images.unsplash.com/photo-1481214110143-ed630356e1bb?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
