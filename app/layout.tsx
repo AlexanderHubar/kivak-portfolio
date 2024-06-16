@@ -4,6 +4,7 @@ import { Footer } from "./components/footer/footer";
 import { Header } from "./components/header/header";
 
 import "./globals.css";
+import "./embla.css";
 
 const manrope = Manrope({ subsets: ["latin", "cyrillic"] });
 
