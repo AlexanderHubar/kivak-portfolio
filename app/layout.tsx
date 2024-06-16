@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import { Footer } from "./components/footer/footer";
-import { FAQ } from "./components/faq";
-import "./globals.css";
 import { Header } from "./components/header/header";
+
+import "./globals.css";
 
 const manrope = Manrope({ subsets: ["latin", "cyrillic"] });
 
@@ -22,7 +22,6 @@ export default function RootLayout({
       <body className={manrope.className}>
         <Header />
         {children}
-        <FAQ />
         <Footer />
       </body>
     </html>

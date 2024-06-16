@@ -1,13 +1,12 @@
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
-export function PortfolioItem({
-  title,
-  date,
-}: {
+type PortfolioItemProps = {
   title: string;
   date: string;
-}) {
+};
+
+export function PortfolioItem({ title, date }: PortfolioItemProps) {
   return (
     <li>
       <Image

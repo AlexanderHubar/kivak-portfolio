@@ -6,7 +6,7 @@ export function Socials({ className }: { className?: string }) {
   return (
     <ul
       className={cn(
-        "border border-dark-12 p-2 rounded-full flex gap-2",
+        "border border-dark-12 p-2 rounded-full flex gap-2 bg-dark-3",
         className
       )}
     >
