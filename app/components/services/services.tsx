@@ -57,6 +57,7 @@ export function Services() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       align: "start",
+      loop: true,
     },
     [AutoHeight()]
   );
