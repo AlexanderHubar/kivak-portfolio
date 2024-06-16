@@ -6,8 +6,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import { buttonVariants } from "@/components/ui/button";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SliderControls } from "@/components/ui/slider-controls";
-
 import { PortfolioItem } from "./portfolio-item";
+
 import { usePrevNextButtons } from "@/hooks/usePrevNextButtons";
 
 const PROJECTS = [

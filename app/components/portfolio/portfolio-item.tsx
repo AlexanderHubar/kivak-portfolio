@@ -8,7 +8,7 @@ type PortfolioItemProps = {
 
 export function PortfolioItem({ title, date }: PortfolioItemProps) {
   return (
-    <div className="embla__slide w-full">
+    <div className="embla__slide">
       <div className="grid">
         <Image
           className="w-full object-cover rounded-2xl mb-4 h-96"

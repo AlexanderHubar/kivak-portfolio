@@ -1,7 +1,6 @@
 .embla {
   max-width: 100%;
   margin: auto;
-  --slide-height: 19rem;
   --slide-spacing: 1rem;
   --slide-size: 100%;
   --slide-spacing-sm: 1.6rem;
@@ -51,4 +50,27 @@
     flex: 0 0 var(--slide-size-lg);
     padding-left: var(--slide-spacing-lg);
   }
+}
+
+/* FULL WIDTH */
+
+.embla_full {
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+}
+
+.embla__container_full {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+  transition: height 0.2s;
+  align-items: flex-start;
+}
+
+.embla__slide_full {
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
 }
