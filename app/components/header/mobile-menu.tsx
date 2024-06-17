@@ -23,7 +23,7 @@ export function MobileMenu({ isMenuOpen }: MobileMenuProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed flex flex-col inset-0 z-10 top-[107px] bg-dark-3 px-4 py-8 lg:hidden"
+          className="fixed flex flex-col inset-0 z-10 top-[82px] bg-dark-3 px-4 py-8 lg:hidden"
         >
           <ul className="grid gap-3 mb-auto">
             {ROUTES.map((route, idx) => {

@@ -5,6 +5,7 @@ import { Header } from "./components/header/header";
 
 import "./globals.css";
 import "./embla.css";
+import { cn } from "@/lib/utils";
 
 const manrope = Manrope({ subsets: ["latin", "cyrillic"] });
 
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={manrope.className}>
+      <body className={cn(manrope.className, "pt-[82px] lg:pt-[108px]")}>
         <Header />
         {children}
         <Footer />
