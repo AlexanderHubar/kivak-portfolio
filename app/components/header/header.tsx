@@ -1,35 +1,62 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
+
 import { buttonVariants } from "@/components/ui/button";
+import { Hamburger } from "@/components/ui/hamburger";
 import { Nav } from "./nav";
+import { usePathname } from "next/navigation";
+import { MobileMenu } from "./mobile-menu";
 
 export function Header() {
+  const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      disableBodyScroll(document.body);
+    }
+    return clearAllBodyScrollLocks;
+  }, [isMenuOpen]);
+
   return (
-    <header className="px-4 lg:px-20 border-b-2 border-dark-12">
-      <div className="border-x flex justify-between lg:items-center border-dark-12 pt-10 lg:py-5 pl-4 lg:px-4">
-        <Link
-          className="text-white font-bold text-xl lg:text-2xl mt-auto lg:mt-0 mb-5 lg:mb-0"
-          href="/"
-        >
-          <h1>KIVAK</h1>
-        </Link>
+    <>
+      <header className="px-4 lg:px-20 border-b-2 border-dark-12 relative">
+        <div className="border-x flex justify-between lg:items-center border-dark-12 pt-10 lg:py-5 pl-4 lg:px-4">
+          <Link
+            className="text-white font-bold text-xl lg:text-2xl mt-auto lg:mt-0 mb-5 lg:mb-0"
+            href="/"
+          >
+            <h1>KIVAK</h1>
+          </Link>
 
-        <Nav />
+          <Nav />
 
-        <Link
-          href="/"
-          className={buttonVariants({
-            variant: "default",
-            size: "lg",
-            className: "hidden lg:inline-flex",
-          })}
-        >
-          Contact Me
-        </Link>
-        <button className="lg:hidden border-t hover:bg-primary-55 hover:shadow-primary transition-all duration-200 ease-out border-l border-dark-12 p-5 rounded-tl-3xl">
-          <Menu height={21} />
-        </button>
-      </div>
-    </header>
+          <Link
+            href="/"
+            className={buttonVariants({
+              variant: "default",
+              size: "lg",
+              className: "hidden lg:inline-flex",
+            })}
+          >
+            Contact Me
+          </Link>
+
+          <Hamburger isOpen={isMenuOpen} onClick={toggleMenu} />
+        </div>
+      </header>
+      <MobileMenu isMenuOpen={isMenuOpen} />
+    </>
   );
 }

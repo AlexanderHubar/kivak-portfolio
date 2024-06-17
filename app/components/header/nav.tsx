@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const NAV = [
+export const ROUTES = [
   {
     name: "Home",
     href: "/",
@@ -29,7 +29,7 @@ export function Nav() {
   return (
     <nav className="hidden lg:block">
       <ul className="flex border-dark-12 border-x border-t rounded-tl-xl rounded-tr-xl -mb-5 overflow-auto">
-        {NAV.map(({ name, href }) => {
+        {ROUTES.map(({ name, href }) => {
           const isActive = path === href;
 
           return (
