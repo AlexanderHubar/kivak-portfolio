@@ -80,7 +80,7 @@ export function About() {
 
               <div className="grid gap-3 lg:gap-2 lg:grid-cols-2 items-center lg:ml-auto">
                 <Link
-                  href="/"
+                  href="/contact"
                   className={buttonVariants({
                     variant: "default",
                     size: "lg",

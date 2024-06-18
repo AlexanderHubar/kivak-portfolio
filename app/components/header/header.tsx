@@ -43,7 +43,7 @@ export function Header() {
           <Nav />
 
           <Link
-            href="/"
+            href="/contact"
             className={buttonVariants({
               variant: "default",
               size: "lg",
